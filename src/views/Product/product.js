@@ -3,7 +3,7 @@ import Headphone from "../../assets/products/headphones.png";
 
 const data = [
     {
-        id: 1,
+        id: Math.random(),
         name: "watch",
         description: "Space Gray Aluminum Case with Sport Band",
         price: "399.90",
@@ -11,16 +11,16 @@ const data = [
         discount: "no",
     },
     {
-        id: 2,
+        id: Math.random(),
         name: "watch",
         description: "Space Gray Aluminum Case with Sport Band",
         price: "893.50",
         imageUrl: Headphone,
         discount: "yes",
-        percent: 34
+        percent: 34,
     },
     {
-        id: 2,
+        id: Math.random(),
         name: "watch",
         description: "Space Gray Aluminum Case with Sport Band",
         price: "399.90",
@@ -28,7 +28,7 @@ const data = [
         discount: "no",
     },
     {
-        id: 2,
+        id: Math.random(),
         name: "watch",
         description: "Space Gray Aluminum Case with Sport Band",
         price: "399.90",
@@ -36,7 +36,7 @@ const data = [
         discount: "no",
     },
     {
-        id: 2,
+        id: Math.random(),
         name: "watch",
         description: "Space Gray Aluminum Case with Sport Band",
         price: "893.50",

@@ -8,7 +8,7 @@ const Box = (props) => {
             {data &&
                 data.map((item) => {
                     return (
-                        <div className="product-box__details">
+                        <div key={item.id} className="product-box__details">
                             <div className="details__imgBg">
                                 {item.discount && item.discount === "yes" ? (
                                     <span className="details__imgBg-bagde">{item.percent}%</span>

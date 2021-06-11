@@ -3,7 +3,7 @@
     flex-direction: row;
     border-bottom: 1px solid #E9EDF0;
     width: 100%;
-    overflow: hidden;
+    overflow-x: scroll;
 }
 
 .product-box__details {

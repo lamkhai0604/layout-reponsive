@@ -1,4 +1,4 @@
-import React from "react";
+import { useState, useEffect } from "react";
 import "./style.css";
 import btnToggle from "../../assets/Vector.png";
 import Seacrh from "../../assets/search.png";
@@ -11,10 +11,25 @@ const titleData = [
 ];
 
 const Navbar = () => {
+    const [background, setBackground] = useState("");
+    const [style, setStyle] = useState("");
+
+    useEffect(() => {
+        document.addEventListener("scroll", () => {
+            if (window.scrollY >= 90) {
+                setBackground("navbar-scrolled");
+                setStyle("sub-header");
+            } else {
+                setBackground("");
+                setStyle("");
+            }
+        });
+    }, []);
+
     return (
-        <div>
+        <div className={`${background}`}>
             <div className="backdrop" />
-            <div className="main-header">
+            <div className={`main-header ${style}`}>
                 <span id="side-menu-toggle">
                     <img src={btnToggle} alt="Logo" />
                 </span>
@@ -35,7 +50,7 @@ const Navbar = () => {
                         <p>LETRO</p>
                     </div>
                     <div className="nav-title__icons">
-                        <img src={Seacrh} alt="Search" style={{marginRight: "5px"}} />
+                        <img src={Seacrh} alt="Search" style={{ marginRight: "5px" }} />
                         <img src={Cart} alt="Cart" />
                     </div>
                 </div>
