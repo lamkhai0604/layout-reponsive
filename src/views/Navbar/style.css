@@ -1,0 +1,131 @@
+.main-header {
+  width: 100%;
+  height: 100%;
+  background-color: #252837;
+  padding: 0 1.5rem 5rem;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  position: relative;
+}
+
+.main-header__nav {
+  height: 100%;
+  display: none;
+  align-items: center;
+}
+
+.main-header__item-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+}
+
+.main-header__nav-title {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  text-align: center;
+}
+
+.nav-title__name {
+  width: 50%;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+}
+
+.nav-title__name>p {
+  font-family: Avenir;
+  font-style: normal;
+  font-weight: 800;
+  font-size: 18px;
+  line-height: 25px;
+  letter-spacing: 0.29em;
+  color: #FFFFFF;
+  left: 39.47%;
+  right: 39.73%;
+  top: 16.67%;
+  bottom: 13.89%;
+}
+
+.nav-title__icons {
+  width: 50%;
+  padding: 1.3rem 0 0;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  text-align: center;
+}
+
+.nav-title__icons>img {
+  width: 16.08px;
+  height: 16.08px;
+  top: 1.58px;
+  left: 1.58px;
+  mix-blend-mode: hard-light;
+}
+
+.main-header__item {
+  margin: 0 1rem;
+  padding: 0;
+}
+
+.main-header__item a {
+  text-decoration: none;
+  color: white;
+}
+
+.mobile-nav {
+  width: 30rem;
+  height: 100vh;
+  max-width: 90%;
+  position: fixed;
+  left: 0;
+  top: 0;
+  background: white;
+  z-index: 10;
+  padding: 2rem 1rem 1rem 2rem;
+  transform: translateX(-100%);
+  transition: transform 0.3s ease-out;
+}
+
+.mobile-nav.open {
+  transform: translateX(0);
+}
+
+#side-menu-toggle {
+  font: inherit;
+  padding: 0.5rem;
+  display: block;
+  background: transparent;
+  color: white;
+  cursor: pointer;
+}
+
+#side-menu-toggle:focus {
+  outline: none;
+}
+
+.backdrop {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.5);
+  z-index: 5;
+  display: none;
+}
+
+@media (min-width: 768px) {
+  .main-header__nav {
+    display: flex;
+  }
+
+  #side-menu-toggle {
+    display: none;
+  }
+}
