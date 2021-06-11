@@ -11,7 +11,7 @@ const Product = () => {
             </div>
             <Box data={data} />
             <div className="product-page__header">
-                <p className="product-page__header-title">New Products</p>
+                <p className="product-page__header-title">Popular</p>
                 <p className="product-page__header-btn">See All</p>
             </div>
             <Box data={data} />
