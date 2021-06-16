@@ -12,7 +12,7 @@ const Product = () => {
         setTimeout(() => {
             setAnimation("");
             setProductName("");
-        }, 1000);
+        }, 700);
     }, [productName]);
 
     const doShowPopup = (name) => {
@@ -40,6 +40,7 @@ const Product = () => {
             </div>
             <Box data={data} doShowPopup={doShowPopup} />
             <Popup animation={animation} productName={productName} />
+
         </div>
     );
 };
