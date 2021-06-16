@@ -33,22 +33,12 @@ const Product = () => {
                 <p className="product-page__header-title">Popular</p>
                 <p className="product-page__header-btn">See All</p>
             </div>
-            <Box
-                data={data}
-                doShowPopup={(name) => {
-                    console.log("Get name", name);
-                }}
-            />
+            <Box data={data} doShowPopup={doShowPopup} />
             <div className="product-page__header">
                 <p className="product-page__header-title">Discount</p>
                 <p className="product-page__header-btn">See All</p>
             </div>
-            <Box
-                data={data}
-                doShowPopup={(name) => {
-                    console.log("Get name", name);
-                }}
-            />
+            <Box data={data} doShowPopup={doShowPopup} />
             <Popup animation={animation} productName={productName} />
         </div>
     );
