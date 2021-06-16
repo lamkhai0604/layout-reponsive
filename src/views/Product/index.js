@@ -1,8 +1,25 @@
+import { useState, useEffect } from "react";
 import "./style.css";
 import Box from "./components/Box";
+import Popup from "./components/Popup";
 import data from "./product.js";
 
 const Product = () => {
+    const [animation, setAnimation] = useState("");
+    const [productName, setProductName] = useState("");
+
+    useEffect(() => {
+        setTimeout(() => {
+            setAnimation("");
+            setProductName("");
+        }, 1000);
+    }, [productName]);
+
+    const doShowPopup = (name) => {
+        setAnimation("popup-product__active");
+        setProductName(name);
+    };
+
     return (
         <div className="product-page">
             <div className="product-page__header">
@@ -10,18 +27,29 @@ const Product = () => {
                 <p className="product-page__header-btn">See All</p>
             </div>
             <div>
-                <Box data={data} />
+                <Box data={data} doShowPopup={doShowPopup} />
             </div>
             <div className="product-page__header">
                 <p className="product-page__header-title">Popular</p>
                 <p className="product-page__header-btn">See All</p>
             </div>
-            <Box data={data} />
+            <Box
+                data={data}
+                doShowPopup={(name) => {
+                    console.log("Get name", name);
+                }}
+            />
             <div className="product-page__header">
                 <p className="product-page__header-title">Discount</p>
                 <p className="product-page__header-btn">See All</p>
             </div>
-            <Box data={data} />
+            <Box
+                data={data}
+                doShowPopup={(name) => {
+                    console.log("Get name", name);
+                }}
+            />
+            <Popup animation={animation} productName={productName} />
         </div>
     );
 };

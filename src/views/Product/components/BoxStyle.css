@@ -4,6 +4,7 @@
     border-bottom: 1px solid #E9EDF0;
     width: 100%;
     overflow-x: scroll;
+    margin-bottom: 1rem;
 }
 
 .product-box__details {

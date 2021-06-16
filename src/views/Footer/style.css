@@ -14,7 +14,6 @@
 }
 
 .footer-default {
-    /* position: absolute; */
     display: flex;
     flex-direction: row;
     justify-content: space-between;
@@ -38,7 +37,6 @@
 .icons-circle {
     position: absolute;
     padding: 0 0 30px 18px;
-
 }
 
 .icons-middle {

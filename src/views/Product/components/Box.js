@@ -2,13 +2,18 @@ import "./BoxStyle.css";
 import HeartIcon from "../../../assets/products/heart-icon.png";
 
 const Box = (props) => {
-    const { data } = props;
+    const { data, doShowPopup } = props;
+
     return (
         <div className="product-box">
             {data &&
                 data.map((item) => {
                     return (
-                        <div key={item.id} className="product-box__details">
+                        <div
+                            key={item.id}
+                            className="product-box__details"
+                            onClick={() => doShowPopup(item.description)}
+                        >
                             <div className="details__imgBg">
                                 {item.discount && item.discount === "yes" ? (
                                     <span className="details__imgBg-bagde">{item.percent}%</span>
